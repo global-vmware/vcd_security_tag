@@ -39,7 +39,7 @@ This is an example of a `main.tf` file that uses the VCD Security Tag Terraform 
 module "vcd_security_tags" {
   source            = "github.com/global-vmware/vcd_security_tag.git?ref=v1.1.0"
   
-  vdc_org_name      = "<VDC-ORG-NAME>"
+  vdc_org_name      = "<US1-VDC-ORG-NAME>"
 
   security_tags = {
     "pd-app-web"    = ["Prod App Web Server 01", "Prod App Web Server 02"]
