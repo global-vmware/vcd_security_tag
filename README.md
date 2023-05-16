@@ -21,8 +21,8 @@ This Terraform module allows you to create Security Tags and associate them with
 | Name              | Description                                                      | Type                      | Default | Required |
 |-------------------|------------------------------------------------------------------|---------------------------|---------|----------|
 | `vdc_org_name` | The name of the organization in VCD | string | `"Organization Name Format: <Account_Number>-<Region>-<Account_Name>"` | yes | 
-| `security_tags` | Map of security tags and their corresponding VM names | map(list(string)) | `{"pd-app-web" = ["Prod App Web Server 01", "Prod App Web Server 02"]}` | no |
-| `vm_names` | List of VM names that the security tag is going to be applied to | list(string) | `["Prod App Web Server 01", "Prod App Web Server 02"]` | no |
+| `security_tags` | Map of security tags and their corresponding VM names | map(list(string)) | {} | yes |
+| `vm_names` | List of VM names that the security tag is going to be applied to | list(string) | [] | yes |
 
 
 ## Outputs
