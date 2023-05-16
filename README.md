@@ -6,8 +6,8 @@ This Terraform module allows you to create Security Tags and associate them with
 
 | Name      | Version |
 |-----------|---------|
-| terraform | >= 1.2  |
-| vcd       | >= 3.8.2 |
+| terraform | ~> 1.2  |
+| vcd       | ~> 3.8.2 |
 
 ## Resources
 
