@@ -38,7 +38,7 @@ This is an example of a `main.tf` file that uses the VCD Security Tag Terraform 
 
 ```terraform
 module "vcd_security_tags" {
-  source            = "github.com/global-vmware/vcd_security_tag.git?ref=v1.1.0"
+  source            = "github.com/global-vmware/vcd_security_tag.git?ref=v1.2.0"
   
   vdc_org_name      = "<US1-VDC-ORG-NAME>"
 
