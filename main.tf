@@ -10,14 +10,14 @@ terraform {
 }
 
 data "vcd_vm" "vm" {
-  for_each = toset(flatten(values(var.security_tags)))
-
-  name = each.value
+  for_each  = toset(flatten(values(var.security_tags)))
+  org       = var.vdc_org_name
+  name      = each.value
 }
 
 resource "vcd_security_tag" "security_tags" {
-  for_each = var.security_tags
-
-  name   = each.key
-  vm_ids = [for vm_name in each.value : data.vcd_vm.vm[vm_name].id]
+  for_each  = var.security_tags
+  org       = var.vdc_org_name
+  name      = each.key
+  vm_ids    = [for vm_name in each.value : data.vcd_vm.vm[vm_name].id]
 }
