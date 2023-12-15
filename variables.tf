@@ -1,4 +1,5 @@
 variable "vdc_org_name" {}
+variable "vdc_name" {}
 
 variable "security_tags" {
   description = "Map of security tags and their corresponding VM names"
