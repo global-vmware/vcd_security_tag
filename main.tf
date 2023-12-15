@@ -12,6 +12,7 @@ terraform {
 data "vcd_vm" "vm" {
   for_each  = toset(flatten(values(var.security_tags)))
   org       = var.vdc_org_name
+  vdc       = var.vdc_name
   name      = each.value
 }
 
